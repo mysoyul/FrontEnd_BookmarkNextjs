@@ -1,8 +1,8 @@
 
 'use client'
 
-import { saveBookmark } from "@/lib/bookmarkAdd";
 import React, { useState } from "react";
+import { saveBookmark } from "@/lib/bookmarkAdd";
 
 const AddBookmarkPage = () => {
     const [title, setTitle] = useState("");
@@ -14,12 +14,12 @@ const AddBookmarkPage = () => {
 
         if(!url) {
             alert("Please enter URL");
-            return;
+            return false;
         }
 
         if(!title) {
           alert("Please enter Title");
-          return;
+          return false;
 	      }
 
         const payload = {
