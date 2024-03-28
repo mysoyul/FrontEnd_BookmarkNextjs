@@ -1,6 +1,7 @@
 
 'use client'
 
+import { saveBookmark } from "@/lib/bookmarkAdd";
 import React, { useState } from "react";
 
 const AddBookmarkPage = () => {
@@ -9,7 +10,27 @@ const AddBookmarkPage = () => {
     const [message, setMessage] = useState<string|null>(null);
 
     const handleSubmit = async (e: React.SyntheticEvent) => {
+        e.preventDefault();
 
+        if(!url) {
+            alert("Please enter URL");
+            return;
+        }
+
+        if(!title) {
+          alert("Please enter Title");
+          return;
+	      }
+
+        const payload = {
+            title, url
+        }
+        const response = await saveBookmark(payload)
+        console.log("SaveBookmark response: ", response)
+
+        setTitle("");
+        setUrl("");
+        setMessage("Bookmark saved successfully");
      }
 
     return (
