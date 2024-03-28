@@ -19,26 +19,26 @@ const Pagination: React.FC<PaginationProps> = ({bookmarks}) => {
                 <ul className="pagination justify-content-center">
 
                     <li className={"page-item " + (bookmarks.hasPrevious ? "" : "disabled")}>
-                        <Link href={firstPage}>
-                            <a className="page-link">First</a>
+                        <Link href={firstPage} className="page-link">
+                            First
                         </Link>
                     </li>
 
                     <li className={"page-item " + (bookmarks.hasPrevious ? "" : "disabled")}>
-                        <Link href={previousPage}>
-                            <a className="page-link">Previous</a>
+                        <Link href={previousPage} className="page-link">
+                            Previous
                         </Link>
                     </li>
 
                     <li className={"page-item " + (bookmarks.hasNext ? "" : "disabled")}>
-                        <Link href={nextPage}>
-                            <a className="page-link">Next</a>
+                        <Link href={nextPage} className="page-link">
+                            Next
                         </Link>
                     </li>
 
                     <li className={"page-item " + (bookmarks.hasNext ? "" : "disabled")}>
-                        <Link href={lastPage}>
-                            <a className="page-link">Last</a>
+                        <Link href={lastPage} className="page-link">
+                            Last
                         </Link>
                     </li>
 
