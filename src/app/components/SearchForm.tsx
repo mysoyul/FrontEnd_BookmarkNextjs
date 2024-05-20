@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useRouter } from 'next/navigation'
 
 const SearchForm: React.FC = () => {
-    const router = useRouter()
+    const router = useRouter();
     const [query, setQuery] = useState("");
 
     const handleSearch = async (e: React.SyntheticEvent) => {
